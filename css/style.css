@@ -1,0 +1,57 @@
+
+/* style.css */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: url(../images/weather-bg.jpeg) no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .weather-app {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 90%;
+  }
+  
+  .location {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .temp {
+    font-size: 4rem;
+    margin: 0.5rem 0;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .high-low {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  .forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+  }
+  
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
