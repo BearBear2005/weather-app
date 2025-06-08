@@ -1,57 +1,98 @@
-
-/* style.css */
+/* Reset & Base Styles */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: url(../images/weather-bg.jpeg) no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .weather-app {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    width: 90%;
-  }
-  
-  .location {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  
-  .temp {
-    font-size: 4rem;
-    margin: 0.5rem 0;
-  }
-  
-  .description {
-    font-size: 1.2rem;
-    opacity: 0.9;
-  }
-  
-  .high-low {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    opacity: 0.8;
-  }
-  
-  .forecast {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1.5rem;
-  }
-  
-  .day {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+  margin: 0;
+  padding: 2rem 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: url(../images/weather-bg.jpeg) no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Dark Overlay */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Weather App Card */
+.weather-app {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+}
+
+/* Current Weather Info */
+.location {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.temp {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-top: 0.5rem;
+}
+
+.high-low {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Forecast Section */
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+/* Individual Day Card */
+.day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.day:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.day > div {
+  flex: 1;
+  text-align: center;
+}
