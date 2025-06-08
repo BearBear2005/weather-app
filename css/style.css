@@ -1,483 +1,98 @@
-/* Global Things*/
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-/* Home Page */
+/* Reset & Base Styles */
 body {
-  background-color: #f7efd8;
-}
-
-.title {
-  color: #8B5E3C;
-  font-size: 3.5rem;
-  font-family: "Poppins";
-  font-weight: 400;
-}
-
-header, main {
+  margin: 0;
+  padding: 2rem 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: url(../images/weather-bg.jpeg) no-repeat center center/cover;
+  color: white;
   text-align: center;
-  padding: 2rem;
-}
-
-header {
-  background-color: #e6d7ab;
-  color: #4E5D2A;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 0.8rem;
-  margin-bottom: 2rem;
-}
-
-.subtitle {
-  color: #4E5D2A;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: #4E5D2A;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  font-family: "Poppins";
-}
-
-nav ul {
-  display: flex;
-  font-family: "Poppins";
-  list-style: none;
-  margin-left: auto;
-  margin-right: 1rem;
-  gap: 1rem;
-  font-size: 2.5rem;
-}
-
-nav h1 {
-  font-family: "Poppins";
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-nav a {
-  text-decoration: none;
-  color: #8B5E3C;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-nav a:hover {
-  color: #5f3210;;
-}
-
-.headshot {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.262);
-}
-
-.social-container {
-  font-size: 5rem;
-  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-a .fa-brands {
-  color: #4E5D2A;
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-
-a .fa-brands:hover {
-  color: #8B5E3C;
-  font-size: 6rem;
-}
-
-
-
-
-/* Projects Page */
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem;
-  padding: 1rem;
-  width: 20rem;
-  height: 25rem;
-  border-radius: 0.5rem;
-  background-color: #e6d7ab;
-  color: #4E5D2A;
-}
-
-.center {
-  text-align: center;
-  padding: 2rem;
-}
-
-.project-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 0 1rem;
-  margin: 2rem auto;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-}
-
-.project-container-left {
-  display: flex;
-  flex-direction: row;
   align-items: flex-start;
-  gap: 2rem;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.project-container-img {
-  flex: 1;
-  min-width: 300px;
-  max-width: 900px;
-  margin-right: 11rem;
-}
-
-.project-container-img img {
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-container-img img:hover {
-  transform: scale(1.05);
-}
-
-.project-description {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 600px;
-  margin-left: 3rem;
-}
-
-.project-description h3 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 0rem;
-  font-family: "Poppins";
-}
-
-.project-description-tech {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.project-description-tech-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-family: "Lora";
-}
-
-.project-description-tech-item {
-  font-size: 1rem;
-  background-color: #e6d7ab;
-  color: #4E5D2A;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-family: "Lora";
-}
-
-.project-description-text {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  font-family: "Lora";
-  line-height: 1.5;
-  letter-spacing: 0.05em;
-  color: #333333;
-  width: 100%;
-}
-
-.project-description-button {
-  font-size: 1.5rem;
-  background-color: #4E5D2A;
-  color: #e6d7ab;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  border: none;
-  font-family: "Poppins";
-  transition: all 0.3s ease-in-out;
-}
-
-.project-description-button:hover {
-  background-color: #92adc7;
-  color: #4E5D2A;
-}
-
-/* ABOUT TEXT */
-.about-text {
-  font-size: 1.3rem;
-  font-family: "Poppins", sans-serif;
-  max-width: 600px;
-  line-height: 1.7;
-  letter-spacing: 0.05em;
-  color: #333333;
-  margin: 0; /* reset margin */
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-}
-
-/* ABOUT IMAGE */
-.about-image {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* ABOUT CONTAINER */
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  margin: 2rem 0;
-  padding: 2rem;
-  background-color: #f7f2de;  /* light warm background */
-  border-radius: 1rem;
-  flex-wrap: wrap; /* allow wrapping on small screens */
-}
-
-/* ABOUT TITLE */
-.about-title {
-  color: #8B5E3C;
-  font-size: 3rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin: 2rem auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-/* CENTER TEXT CLASS */
-.about-center {
-  font-size: 2rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  color: #8B5E3C;
-  margin-bottom: 1rem;
-}
-
-/* LANGUAGE & TOOL CONTAINERS */
-.language-container, .tool-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  margin: 2rem 0;
-}
-
-/* LANGUAGE & TOOL ITEMS */
-.language-item, .tool-item {
-  color: #4E5D2A;
-  font-size: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.language-item:hover, .tool-item:hover {
-  color: #5f3210;
-}
-
-.language-certified {
-  font-size: 0.9rem;
-  font-family: "Lora", serif;
-  color: #8B5E3C;
-  background-color: #e6d7ab;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-}
-
-.status-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 2rem auto;
-  padding-left: 2rem;
-  border-left: 4px solid #8B5E3C;
-  max-width: 600px;
-}
-
-.status-item {
   position: relative;
-  padding: 1rem 1rem 1rem 2rem;
-  margin-bottom: 1rem;
-  background-color: #fff7e0;
-  border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
-  color: #4E5D2A;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.status-item::before {
-  content: "";
+/* Dark Overlay */
+body::before {
+  content: '';
   position: absolute;
-  left: -1.15rem;
-  top: 1rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: #8B5E3C;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .about-text {
-    max-width: 100%;
-    text-align: center;
-  }
-  .about-title {
-    font-size: 2.5rem;
-  }
+/* Weather App Card */
+.weather-app {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
 }
 
-
-
-/* Contact Page */
-
-.contact-title {
-  font-size: 3.5rem;
-  font-family: "Poppins";
-  font-weight: 400;
-  color: #4E5D2A;
-}
-
-.contact-text {
-  font-size: 1.5rem;
-  font-family: "Poppins";
-  font-weight: 400;
-  color: #333333;
-}
-.contact-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-}
-
-.contact-item {
-  font-size: 3rem;
-  color: #4E5D2A;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-.contact-item:hover {
-  color: #8B5E3C;
-}
-
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-form label {
-  font-size: 1.5rem;
-  font-family: "Poppins";
-  font-weight: 400;
-  color: #4E5D2A;
+/* Current Weather Info */
+.location {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
-.contact-form input, .contact-form textarea {
+.temp {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-top: 0.5rem;
+}
+
+.high-low {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Forecast Section */
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+/* Individual Day Card */
+.day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 1rem;
-  border-radius: 20px;
-  border: none;
-  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
   font-size: 1rem;
-  font-family: "Poppins";
-  font-weight: 400;
-  color: #4E5D2A;
 }
 
-.contact-form button {
-  background-color: #4E5D2A;
-  color: #e6d7ab;
-  padding: 0.5rem 1rem;
-  width: 5rem;
-  height: 3rem;
-  border-radius: 20px;
-  border: none;
+.day:hover {
+  background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  font-size: 1rem;
 }
 
-.contact-form button:hover {
-  background-color: #92adc7;
-  color: #4E5D2A;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-  outline: none;
-  border: 2px solid #4E5D2A;
-}
-
-/* Scroll animation base state */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform;
-}
-
-/* Active state when element is in viewport */
-.animate-on-scroll.active {
-  opacity: 1;
-  transform: translateY(0);
+.day > div {
+  flex: 1;
+  text-align: center;
 }
